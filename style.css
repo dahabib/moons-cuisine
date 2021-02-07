@@ -1,3 +1,10 @@
 body {
     background-color: goldenrod;
+    margin-bottom: 50px;
+}
+
+.container{
+    width: 85%;
+    height: auto;
+    margin: auto;
 }
