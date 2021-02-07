@@ -59,16 +59,16 @@ const displaySingleMeal = meal => {
             <img src="${meal.strMealThumb}" class="card-img-top" id>
             <h5 class="card-title">Ingredients</h5>
             <ul class="list-group list-group-flush">
-                <li class="list-group-item">${meal.strMeasure1}      ${meal.strIngredient1}</li>
-                <li class="list-group-item">${meal.strMeasure2}      ${meal.strIngredient2}</li>
-                <li class="list-group-item">${meal.strMeasure3}      ${meal.strIngredient3}</li>
-                <li class="list-group-item">${meal.strMeasure4}      ${meal.strIngredient4}</li>
-                <li class="list-group-item">${meal.strMeasure5}      ${meal.strIngredient5}</li>
-                <li class="list-group-item">${meal.strMeasure6}      ${meal.strIngredient6}</li>
-                <li class="list-group-item">${meal.strMeasure7}      ${meal.strIngredient7}</li>
-                <li class="list-group-item">${meal.strMeasure8}      ${meal.strIngredient8}</li>
-                <li class="list-group-item">${meal.strMeasure9}      ${meal.strIngredient9}</li>
-                <li class="list-group-item">${meal.strMeasure10}     ${meal.strIngredient10}</li>
+                <li class="list-group-item">${meal.strMeasure1}  ${meal.strIngredient1}</li>
+                <li class="list-group-item">${meal.strMeasure2}  ${meal.strIngredient2}</li>
+                <li class="list-group-item">${meal.strMeasure3}  ${meal.strIngredient3}</li>
+                <li class="list-group-item">${meal.strMeasure4}  ${meal.strIngredient4}</li>
+                <li class="list-group-item">${meal.strMeasure5}  ${meal.strIngredient5}</li>
+                <li class="list-group-item">${meal.strMeasure6}  ${meal.strIngredient6}</li>
+                <li class="list-group-item">${meal.strMeasure7}  ${meal.strIngredient7}</li>
+                <li class="list-group-item">${meal.strMeasure8}  ${meal.strIngredient8}</li>
+                <li class="list-group-item">${meal.strMeasure9}  ${meal.strIngredient9}</li>
+                <li class="list-group-item">${meal.strMeasure10}  ${meal.strIngredient10}</li>
             </ul>
         </div>        
         `;
