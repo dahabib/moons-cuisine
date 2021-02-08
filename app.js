@@ -11,6 +11,7 @@ const loadMeal = search => {
 const searchButton = document.getElementById("search-button");
 searchButton.addEventListener("click", () => {
     document.getElementById('showcase-meal').innerHTML = '';
+    document.getElementById('warning').innerHTML = '';
     const searchMeal = document.getElementById("meal-input").value;
     loadMeal(searchMeal);
 });
@@ -53,11 +54,10 @@ const displaySingleMeal = meal => {
     const mealInfo = document.getElementById('single-meal-info');
     document.getElementById("exampleModalLabel").innerText = meal.strMeal;
 
-
         const mealIngredients = `
         <div class="meal-modal">
             <img src="${meal.strMealThumb}" class="card-img-top" id>
-            <h5 class="card-title">Ingredients</h5>
+            <h5 class="text-success py-2 mt-1 text-center">Ingredients</h5>
             <ul class="list-group list-group-flush">
                 <li class="list-group-item">${meal.strMeasure1}  ${meal.strIngredient1}</li>
                 <li class="list-group-item">${meal.strMeasure2}  ${meal.strIngredient2}</li>
