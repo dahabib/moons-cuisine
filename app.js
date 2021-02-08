@@ -8,6 +8,9 @@ const loadMeal = search => {
         .catch(error => console.log(error));;
 }
 
+
+// Click event handler
+
 const searchButton = document.getElementById("search-button");
 searchButton.addEventListener("click", () => {
     document.getElementById('showcase-meal').innerHTML = '';
@@ -16,14 +19,16 @@ searchButton.addEventListener("click", () => {
     loadMeal(searchMeal);
 });
 
+// Display Meal Catalog
+
 const displayMeal = meals => {
     const mealsContainer = document.getElementById('showcase-meal');
-    if(meals === null) {
+    if (meals === null) {
         const warn = document.createElement('h3');
         warn.innerText = "No meal found. Please provide a proper name.";
         document.getElementById('warning').appendChild(warn);
-      } else {
-        meals.forEach(meal => {        
+    } else {
+        meals.forEach(meal => {
             const mealDiv = document.createElement('div');
             mealDiv.className = "col";
             const mealDetails = `            
@@ -36,10 +41,12 @@ const displayMeal = meals => {
             `;
             mealDiv.innerHTML = mealDetails;
             mealsContainer.appendChild(mealDiv);
-        });       
-      }
+        });
+    }
 }
-    
+
+// Display Single Meal
+
 const mealDetail = id => {
     console.log(id);
     const url = `https://www.themealdb.com/api/json/v1/1/lookup.php?i=${id}`;
@@ -50,27 +57,25 @@ const mealDetail = id => {
 }
 
 const displaySingleMeal = meal => {
-    console.log(meal);
     const mealInfo = document.getElementById('single-meal-info');
     document.getElementById("exampleModalLabel").innerText = meal.strMeal;
-
-        const mealIngredients = `
+    const mealIngredients = `
         <div class="meal-modal">
-            <img src="${meal.strMealThumb}" class="card-img-top" id>
-            <h5 class="text-success py-2 mt-1 text-center">Ingredients</h5>
+            <img src="${meal.strMealThumb}" class="card-img-top">
+            <h5 class="text-success py-2 mt-1 fw-bold">Ingredients</h5>
             <ul class="list-group list-group-flush">
-                <li class="list-group-item">${meal.strMeasure1}  ${meal.strIngredient1}</li>
-                <li class="list-group-item">${meal.strMeasure2}  ${meal.strIngredient2}</li>
-                <li class="list-group-item">${meal.strMeasure3}  ${meal.strIngredient3}</li>
-                <li class="list-group-item">${meal.strMeasure4}  ${meal.strIngredient4}</li>
-                <li class="list-group-item">${meal.strMeasure5}  ${meal.strIngredient5}</li>
-                <li class="list-group-item">${meal.strMeasure6}  ${meal.strIngredient6}</li>
-                <li class="list-group-item">${meal.strMeasure7}  ${meal.strIngredient7}</li>
-                <li class="list-group-item">${meal.strMeasure8}  ${meal.strIngredient8}</li>
-                <li class="list-group-item">${meal.strMeasure9}  ${meal.strIngredient9}</li>
-                <li class="list-group-item">${meal.strMeasure10}  ${meal.strIngredient10}</li>
+                <li class="list-group-item"> ${meal.strMeasure1} ${meal.strIngredient1}</li>
+                <li class="list-group-item"> ${meal.strMeasure2} ${meal.strIngredient2}</li>
+                <li class="list-group-item"> ${meal.strMeasure3} ${meal.strIngredient3}</li>
+                <li class="list-group-item"> ${meal.strMeasure4} ${meal.strIngredient4}</li>
+                <li class="list-group-item"> ${meal.strMeasure5} ${meal.strIngredient5}</li>
+                <li class="list-group-item"> ${meal.strMeasure6} ${meal.strIngredient6}</li>
+                <li class="list-group-item"> ${meal.strMeasure7} ${meal.strIngredient7}</li>
+                <li class="list-group-item"> ${meal.strMeasure8} ${meal.strIngredient8}</li>
+                <li class="list-group-item"> ${meal.strMeasure9} ${meal.strIngredient9}</li>
+                <li class="list-group-item"> ${meal.strMeasure10} ${meal.strIngredient10}</li>
             </ul>
         </div>        
-        `;
+    `;
     mealInfo.innerHTML = mealIngredients;
 }
